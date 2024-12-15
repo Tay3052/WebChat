@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* body {
+  background-image: url("../static/images/SecretChat.png");
+  background-size: cover;
+} */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

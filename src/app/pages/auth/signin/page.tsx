@@ -1,15 +1,27 @@
 "use client";
 
-import { Box, Button, Center, Link, Text } from "@yamada-ui/react";
 import { signIn } from "next-auth/react";
+import { Box, Button, Center, Input, Link, Text } from "@yamada-ui/react";
 
-export default function Home() {
+export default function Signin() {
   return (
     <>
       <Center alignItems={"center"}>
-        <Button>
-          <Link href="/pages/auth/signin">Sign In from Here</Link>
-        </Button>
+        <form onSubmit={() => signIn("credentials")}>
+          <Input
+            margin={"20px 0"}
+            type="text"
+            id="emali"
+            placeholder="YOUR E-MAIL"
+          />
+          <Input
+            type="password"
+            id="password"
+            placeholder="YOUR PASSWORD"></Input>
+          <Button type="submit" color={"primary"} margin={"20px 0"}>
+            Login
+          </Button>
+        </form>
       </Center>
 
       <Center>
