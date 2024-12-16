@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { UIProvider } from "@yamada-ui/react";
+import { UIProvider, Box } from "@yamada-ui/react";
 import Header from "@/components/header";
+import { SessionProviderComponent } from "@/components/sessionProviderComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +29,13 @@ export default function RootLayout({
     <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Header />
-        <UIProvider>{children}</UIProvider>
+        {/* SessionProviderのコンポーネントを作成して配置 */}
+        <SessionProviderComponent>
+          <UIProvider>
+            <Header />
+            <Box>{children}</Box>
+          </UIProvider>
+        </SessionProviderComponent>
       </body>
     </html>
   );

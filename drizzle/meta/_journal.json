@@ -5,78 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1733421212762,
-      "tag": "0000_puzzling_lord_hawal",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1733440066619,
-      "tag": "0001_curved_grey_gargoyle",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1733444113890,
-      "tag": "0002_brief_changeling",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1733444249156,
-      "tag": "0003_bouncy_pandemic",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "7",
-      "when": 1733446163744,
-      "tag": "0004_remarkable_madrox",
-      "breakpoints": true
-    },
-    {
-      "idx": 5,
-      "version": "7",
-      "when": 1734165196524,
-      "tag": "0005_fixed_trauma",
-      "breakpoints": true
-    },
-    {
-      "idx": 6,
-      "version": "7",
-      "when": 1734193611885,
-      "tag": "0006_huge_scorpion",
-      "breakpoints": true
-    },
-    {
-      "idx": 7,
-      "version": "7",
-      "when": 1734195924132,
-      "tag": "0007_nasty_zarek",
-      "breakpoints": true
-    },
-    {
-      "idx": 8,
-      "version": "7",
-      "when": 1734196608834,
-      "tag": "0008_foamy_ulik",
-      "breakpoints": true
-    },
-    {
-      "idx": 9,
-      "version": "7",
-      "when": 1734197985410,
-      "tag": "0009_useful_mephistopheles",
-      "breakpoints": true
-    },
-    {
-      "idx": 10,
-      "version": "7",
-      "when": 1734255637231,
-      "tag": "0010_safe_earthquake",
+      "when": 1734350182863,
+      "tag": "0000_needy_captain_midlands",
       "breakpoints": true
     }
   ]

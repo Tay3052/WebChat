@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
 
-const handler = NextAuth({
+export const authOptioons = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -35,7 +35,9 @@ const handler = NextAuth({
   pages: {
     signIn: "/pages/auth/signin",
   },
-});
+};
+
+const handler = NextAuth(authOptioons);
 
 export const GET = handler;
 export const POST = handler;

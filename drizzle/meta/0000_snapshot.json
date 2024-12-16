@@ -1,5 +1,5 @@
 {
-  "id": "2779704f-320c-4c81-8b48-8be0fa8b55ab",
+  "id": "c081d1a4-24ba-4e06-8c99-7cd350f8e0d2",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -12,10 +12,11 @@
           "name": "id",
           "type": "uuid",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "default": "gen_random_uuid()"
         },
-        "name": {
-          "name": "name",
+        "username": {
+          "name": "username",
           "type": "text",
           "primaryKey": false,
           "notNull": true
@@ -24,7 +25,7 @@
           "name": "email",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "password": {
           "name": "password",
@@ -32,15 +33,28 @@
           "primaryKey": false,
           "notNull": true
         },
+        "publicpgpkey": {
+          "name": "publicpgpkey",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "secletpgpkey": {
+          "name": "secletpgpkey",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "created_at": {
           "name": "created_at",
-          "type": "date",
+          "type": "timestamp",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
         },
         "updated_at": {
           "name": "updated_at",
-          "type": "date",
+          "type": "timestamp",
           "primaryKey": false,
           "notNull": true
         }
@@ -49,11 +63,11 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "users_name_unique": {
-          "name": "users_name_unique",
+        "users_username_unique": {
+          "name": "users_username_unique",
           "nullsNotDistinct": false,
           "columns": [
-            "name"
+            "username"
           ]
         },
         "users_email_unique": {
