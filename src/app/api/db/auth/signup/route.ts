@@ -5,7 +5,8 @@ import { hash } from "bcrypt";
 
 export async function POST(req: NextRequest) {
   try {
-    const { username, email, password, pgpkey } = await req.json();
+    const { username, email, password, publicpgpkey, secretpgpkey } =
+      await req.json();
 
     // パスワードのハッシュ化
     const hashedPassword = await hash(password, 10);
@@ -17,7 +18,8 @@ export async function POST(req: NextRequest) {
         username,
         email,
         password: hashedPassword,
-        pgpkey: pgpkey || null,
+        publicpgpkey: publicpgpkey || null,
+        secretpgpkey: secretpgpkey || null,
       })
       .returning({
         id: schema.users.id,
