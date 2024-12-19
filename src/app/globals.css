@@ -2,25 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  background-image: url("../static/images/SecretChat.png");
-  background-size: cover;
-} */
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("/background.png");
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --background-image: linear-gradient(
+        to right bottom,
+        rgba(10, 10, 10, 0.8),
+        rgba(10, 10, 10, 0.9)
+      ),
+      url("/background.png");
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }

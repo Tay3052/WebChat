@@ -12,6 +12,7 @@ export async function POST(req: NextRequest) {
     const user = await db
       .select({
         id: users.id,
+        username: users.username,
         email: users.email,
         password: users.password,
       })
@@ -38,7 +39,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         message: "ログインに成功しました",
-        user: { id: user[0].id, email: user[0].email },
+        user: { id: user[0].id, email: user[0].email, name: user[0].username },
       },
       { status: 200 }
     );
